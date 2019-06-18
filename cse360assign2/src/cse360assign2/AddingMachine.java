@@ -11,47 +11,52 @@ package cse360assign2;
 public class AddingMachine {
 	
 	private int total;
+	private String history = "0";
 	
 	public AddingMachine () {
-	
+		
 		total = 0;  // not needed - included for clarity
 	}
 	
 	
 	/**
-	 * Not implemented yet
-	 * @return 0
+	 * returns total
+	 * @return total
 	 */
 	public int getTotal () {
 	
-		return 0;
+		return total;
 	
 	}
 	
 	/**
-	 * Not implemented yet
+	 * adds value to total
+	 * modifies history
 	 * @param value
 	 */
 	public void add (int value) {
-	
+		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	
 	/**
-	 * Not implemented yet
+	 * subtracts value from total
+	 * modifies history
 	 * @param value
 	 */
 	public void subtract (int value) {
-	
+		total = total - value;
+		history = history + " - " + value;
 	}
 	
 	
 	/**
-	 * Not implemented yet
-	 * @return ""
+	 * returns history of operations
+	 * @return history
 	 */
 	public String toString () {
-		return "";
+		return history;
 	
 	}
 	
